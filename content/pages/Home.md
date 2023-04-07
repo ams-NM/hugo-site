@@ -54,16 +54,4 @@ query-properties:: [:block :pr :issued]
  }
 ```
 
-  + query-table:: true
-{{< logseq/orgQUERY >}}{
- :title [:h2 "Block query"]
- :query [
-         :find (pull ?b [*])
-         :where
-         [?b :block/parent ?parent]
-         (not (has-property ?parent :template))
-         (task ?b #{"TODO", "DONE"})
-         (property ?b :plan "2023-04-05 Wed")
-         ]
- }
-{{< / logseq/orgQUERY >}}
+
